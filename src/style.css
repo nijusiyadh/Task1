@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.flexColContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-body {
+  width: 100vw;
+  height: 100vh;
+  background: #a3e4d7;
+  padding: 40px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.329);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.input-container {
+  background-color: white;
+  width: 30%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.draw-input {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid lightsteelblue;
+  border-radius: 10px;
+}
+
+.input-draw {
+  width: 50%;
+}
+
+.input-draw label {
+  font-weight: 600;
+  font-size: 24px;
+  color: #3498db;
+}
+
+.input-draw input {
+  width: 170px;
+  height: 60px;
+  border: 1px solid #1abc9c;
+  border-radius: 8px;
+  outline: none;
+  padding: 20px;
+  color: slategrey;
+  font-size: 20px;
+}
+
+.draw-button button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #17a589;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.start-stop {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-stop button {
+  padding: 7px 20px;
+  border: none;
+  font-size: 19px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.start-stop button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 1px 1px 4px rgba(146, 171, 108, 0.108);
+}
+
+.start-stop .start {
+  background-color: #1abc9c;
+}
+
+.start-stop .stop {
+  background-color: #e74c3c;
+}
+
+.delay-input {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delay-input label {
+  font-size: 18px;
+  font-weight: 500;
+  color: slategray;
+}
+
+.delay-input input {
+  height: 50px;
+  width: 80px;
+  border-radius: 10px;
+  border: 1px solid slategray;
+  padding: 10px;
+  outline: none;
+}
+
+.display {
+  display: flex;
+  flex: 1;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid #9b59b6;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.active {
+  background-color: white;
+}
+
+.restart {
+  background-color: #3498db;
+}
+
+.clear-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clear {
+  background-color: #d0d3d4;
+}
+
+.patterns {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.patterns::-webkit-scrollbar {
+  width: 5px;
+}
+.patterns::-webkit-scrollbar-thumb {
+  width: 2px;
+  border-radius: 100px;
+  background-color: lightblue;
+  height: 5px;
+}
+.patterns::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: transparent;
+}
+
+.pattern-container {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+}
+
+.pattern-card {
+  background-color: rgba(255, 255, 255, 0.115);
+  width: 100%;
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 1px 10px 1px rgba(78, 77, 77, 0.121);
+}
+
+.pattern-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.pattern-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.selected-pattern-card {
+  transform: scale(1.08);
+  box-shadow: 0px 1px 10px 1px rgba(78, 77, 77, 0.184);
+  color: white;
+  background-color: #aed6f1;
+}
+
+.pattern-selector .row {
+  gap: 3px;
+}
+
+.pattern-selector .circle {
+  width: 10px;
+  height: 10px;
+}
+
+.pattern-selector .active {
+  background-color: #27ae60;
+}
+
+.pattern-card h1 {
+  font-size: 16px;
+  text-align: center;
+}

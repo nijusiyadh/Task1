@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task One</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- <script defer src="src/script.js"></script> -->
+    <script defer src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="wrapper">
+        <div class="input-container">
+          <div class="draw-input">
+            <div class="flexColContainer input-draw">
+              <label for="row-input">Number of Rows</label>
+              <input type="number" id="row-input" class="row-input" value="0" />
+            </div>
+            <div class="draw-button">
+              <button class="draw">Draw</button>
+            </div>
+          </div>
+          <div class="delay-input">
+            <label for="delay">Delay</label>
+            <div>
+              <input type="number" class="delay" id="delay" value="500" />
+              <span>/ms</span>
+            </div>
+          </div>
+          <div class="start-stop">
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+            <button class="restart">Restart</button>
+          </div>
+          <div class="start-stop clear-button">
+            <button class="clear">Clear</button>
+          </div>
+          <div class="patterns">
+            <div class="pattern-container">
+              <div
+                data-pattern="linear"
+                class="pattern-card selected-pattern-card"
+              >
+                <div class="pattern-selector">
+                  <span class="row">
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                </div>
+                <div>
+                  <h1>Linear</h1>
+                </div>
+              </div>
+              <div data-pattern="border" class="pattern-card">
+                <div class="pattern-selector">
+                  <span class="row">
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                  </span>
+                </div>
+                <div>
+                  <h1>Border</h1>
+                </div>
+              </div>
+              <div data-pattern="center" class="pattern-card">
+                <div class="pattern-selector">
+                  <span class="row">
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                </div>
+                <div>
+                  <h1>Center</h1>
+                </div>
+              </div>
+              <div data-pattern="random" class="pattern-card">
+                <div class="pattern-selector">
+                  <span class="row">
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                  </span>
+                </div>
+                <div>
+                  <h1>Random</h1>
+                </div>
+              </div>
+              <div data-pattern="border-circle" class="pattern-card">
+                <div class="pattern-selector">
+                  <span class="row">
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle active"></span>
+                  </span>
+                  <span class="row">
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                    <span class="circle active"></span>
+                  </span>
+                </div>
+                <div>
+                  <h1>Border Circle</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div class="output">
+            <!-- <span class="row">
+              <span class="circle"></span>
+            </span>
+            <span class="row active">
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </span>
+            <span class="row">
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
+            </span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
